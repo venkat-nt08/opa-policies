@@ -1,17 +1,22 @@
 package authz
 
-default allow := false
+default allow = false
 
-allow if {
+allow {
     input.role == "admin"
 }
 
-allow if {
+allow {
     input.role == "developer"
-    input.action in {"read", "write", "list"}
+    input.action == "read"
 }
 
-allow if {
+allow {
+    input.role == "developer"
+    input.action == "write"
+}
+
+allow {
     input.role == "viewer"
     input.action == "read"
 }
