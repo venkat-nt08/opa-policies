@@ -11,6 +11,10 @@
     "alice": {
       "role": "viewer",
       "department": "sales"
-    }
+    },
+"bob": {
+    "role": "admin",
+    "department": "engineering"
+}
   }
 }
