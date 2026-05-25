@@ -3,21 +3,25 @@ package authz
 default allow = false
 
 allow {
-    input.role == "admin"
+    user := data.users[input.user]
+    user.role == "admin"
 }
 
 allow {
-    input.role == "developer"
+    user := data.users[input.user]
+    user.role == "developer"
     input.action == "read"
 }
 
 allow {
-    input.role == "developer"
+    user := data.users[input.user]
+    user.role == "developer"
     input.action == "write"
 }
 
 allow {
-    input.role == "viewer"
+    user := data.users[input.user]
+    user.role == "viewer"
     input.action == "read"
 }
 allow {

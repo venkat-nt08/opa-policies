@@ -1,0 +1,16 @@
+{
+  "users": {
+    "venkat": {
+      "role": "developer",
+      "department": "engineering"
+    },
+    "kumaran": {
+      "role": "admin",
+      "department": "management"
+    },
+    "alice": {
+      "role": "viewer",
+      "department": "sales"
+    }
+  }
+}
