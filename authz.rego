@@ -20,3 +20,7 @@ allow {
     input.role == "viewer"
     input.action == "read"
 }
+allow {
+    input.role == "manager"
+    input.action == "read"
+}
